@@ -53,10 +53,11 @@ elif (status1=="Contact Ouvert" and status2=="Contact Ferme"):
   time.sleep(2)
   GPIO.output(19,GPIO.LOW)
   # Set Power on the Lamp
+  print "\n La lumiere va s'allumer pour 45 secondes"  
   GPIO.output(13,GPIO.HIGH)
   time.sleep(45)
   GPIO.output(13,GPIO.LOW)
-  
+  print "\n La lumiere va s'eteindre !!!"  
   print "\n IMPULSION DONNEE A LA PORTE"
 else:
   print "\n\n\n STATUS FINAL : la porte n'est ni FERMEE ni OUVERTE , elle est ENTRE-OUVERTE"

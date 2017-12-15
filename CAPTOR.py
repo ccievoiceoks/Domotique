@@ -16,7 +16,7 @@ while counters<max_counters:
     status="Contact Ferme"
   else:
     status="Contact Ouvert"
-  if (GPIO.input(21) and GPIO.input(26)):
+  if (GPIO.input(21) or GPIO.input(26)):
     print "\nValue Contact BAS =====> ",status
     print "\nValue Contact HAUT =====> ",status
     print("Open Contact")

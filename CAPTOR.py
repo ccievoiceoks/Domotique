@@ -41,5 +41,11 @@ while counters<max_counters:
     print "Counters => " + str(counters)
 GPIO.output(4,GPIO.LOW)
 GPIO.output(18,GPIO.LOW)
+if (status1=="Contact Ferme" and status2=="Contact Ouvert"):
+  print "\n\n\n STATUS FINAL : la porte est FERMEE"
+elif (status1=="Contact Ouvert" and status2=="Contact Ferme"):
+  print "\n\n\n STATUS FINAL : la porte est OUVERTE"
+else:
+  print "\n\n\n STATUS FINAL : la porte n'est ni FERMEE ni OUVERTE , elle est ENTRE-OUVERTE"
 print " "
 print " Script Terminated" 

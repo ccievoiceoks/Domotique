@@ -30,7 +30,7 @@ while counters<max_counters:
     time.sleep(1)
     counters+=1
     print "Counters => " + str(counters)
-    GPIO.output(4,GPIO.LOW)
-    GPIO.output(18,GPIO.LOW)
+GPIO.output(4,GPIO.LOW)
+GPIO.output(18,GPIO.LOW)
 print " "
 print " Script Terminated" 

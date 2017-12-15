@@ -10,6 +10,9 @@ GPIO.setup(18,GPIO.OUT)
 GPIO.setup(4,GPIO.OUT)
 # Output Contact
 GPIO.setup(19,GPIO.OUT,initial = GPIO.LOW)
+# Output Contact ===> Power 220v
+GPIO.setup(13,GPIO.OUT,initial = GPIO.LOW)
+
 counters=0
 max_counters=int(raw_input("\nHow many times do I need to iterate the loop? :\n\n "))
 while counters<max_counters:
@@ -49,6 +52,11 @@ elif (status1=="Contact Ouvert" and status2=="Contact Ferme"):
   GPIO.output(19,GPIO.HIGH)
   time.sleep(2)
   GPIO.output(19,GPIO.LOW)
+  # Set Power on the Lamp
+  GPIO.output(13,GPIO.HIGH)
+  time.sleep(45)
+  GPIO.output(13,GPIO.LOW)
+  
   print "\n IMPULSION DONNEE A LA PORTE"
 else:
   print "\n\n\n STATUS FINAL : la porte n'est ni FERMEE ni OUVERTE , elle est ENTRE-OUVERTE"

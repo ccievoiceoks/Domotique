@@ -9,10 +9,10 @@ time.sleep(5)
 print "Circuit on"
 GPIO.output(4,GPIO.LOW)
 GPIO.output(18,GPIO.HIGH)
-time.sleep(20)
+time.sleep(10)
 print "Circuit off"
 GPIO.output(4,GPIO.HIGH)
 GPIO.output(18,GPIO.LOW)
-time.sleep(20)
+time.sleep(10)
 GPIO.output(4,GPIO.LOW)
 print "Script Terminated"

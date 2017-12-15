@@ -11,13 +11,13 @@ while True:
       if (GPIO.input(21)):
               print GPIO.input(21)
               print("Open Contact")
-       		  GPIO.output(4,GPIO.LOW)
-			  GPIO.output(18,GPIO.HIGH)
+       	      GPIO.output(4,GPIO.LOW)
+	      GPIO.output(18,GPIO.HIGH)
               time.sleep(2)
       else:
               print GPIO.input(21)
               print ("Closed Contact")
               GPIO.output(18,GPIO.LOW)
-			  GPIO.output(4,GPIO.HIGH)
+	      GPIO.output(4,GPIO.HIGH)
               time.sleep(2)
 

@@ -14,3 +14,5 @@ print "Circuit off"
 GPIO.output(4,GPIO.HIGH)
 GPIO.output(18,GPIO.LOW)
 time.sleep(20)
+GPIO.output(4,GPIO.LOW)
+print "Script Terminated"

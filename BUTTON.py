@@ -7,6 +7,7 @@ GPIO.setup(18,GPIO.OUT)
 GPIO.setup(4,GPIO.OUT)
 input = GPIO.input(21)
 print input
+counters=0
 while counters<180:
       if (GPIO.input(21)):
               print GPIO.input(21)
@@ -14,14 +15,14 @@ while counters<180:
        	      GPIO.output(4,GPIO.LOW)
 	      GPIO.output(18,GPIO.HIGH)
               time.sleep(2)
-              counters+=
+              counters+=1
       else:
               print GPIO.input(21)
               print ("Closed Contact")
               GPIO.output(18,GPIO.LOW)
 	      GPIO.output(4,GPIO.HIGH)
               time.sleep(2)
-              counters+=
+              counters+=1
 GPIO.output(4,GPIO.LOW)
 GPIO.output(18,GPIO.LOW)
 

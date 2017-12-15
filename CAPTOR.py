@@ -12,9 +12,13 @@ GPIO.setup(4,GPIO.OUT)
 counters=0
 max_counters=int(raw_input("\nHow many times do I need to iterate the loop? :\n\n "))
 while counters<max_counters:
-  if (GPIO.input(21)):
-    print "\nValue Contact BAS =====> ",GPIO.input(21)
-    print "\nValue Contact HAUT =====> ",GPIO.input(26)
+  if (GPIO.input(21)==0 or GPIO.input(26)==0):
+    status="Contact Ferme"
+  else:
+    status="Contact Ouvert"
+  if (GPIO.input(21) and GPIO.input(26)):
+    print "\nValue Contact BAS =====> ",status
+    print "\nValue Contact HAUT =====> ",status
     print("Open Contact")
     GPIO.output(4,GPIO.LOW)
     GPIO.output(18,GPIO.HIGH)

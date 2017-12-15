@@ -49,3 +49,4 @@ else:
   print "\n\n\n STATUS FINAL : la porte n'est ni FERMEE ni OUVERTE , elle est ENTRE-OUVERTE"
 print " "
 print " Script Terminated" 
+GPIO.cleanup()

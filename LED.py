@@ -16,3 +16,4 @@ GPIO.output(18,GPIO.LOW)
 time.sleep(10)
 GPIO.output(4,GPIO.LOW)
 print "Script Terminated"
+GPIO.cleanup()

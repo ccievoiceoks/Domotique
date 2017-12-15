@@ -9,7 +9,7 @@ GPIO.setup(26,GPIO.IN)
 GPIO.setup(18,GPIO.OUT)
 GPIO.setup(4,GPIO.OUT)
 # Output Contact
-GPIO.setup(19,GPIO.OUT,initial = GPIO.LOW)
+GPIO.setup(19,GPIO.OUT,initial = GPIO.HIGH)
 counters=0
 max_counters=int(raw_input("\nHow many times do I need to iterate the loop? :\n\n "))
 while counters<max_counters:
@@ -46,9 +46,9 @@ if (status1=="Contact Ferme" and status2=="Contact Ouvert"):
   print "\n\n\n STATUS FINAL : la porte est FERMEE"
 elif (status1=="Contact Ouvert" and status2=="Contact Ferme"):
   print "\n\n\n STATUS FINAL : la porte est OUVERTE"
-  GPIO.output(19,GPIO.HIGH)
-  time.sleep(2)
   GPIO.output(19,GPIO.LOW)
+  time.sleep(2)
+  GPIO.output(19,GPIO.HIGH)
   print "\n IMPULSION DONNEE A LA PORTE"
 else:
   print "\n\n\n STATUS FINAL : la porte n'est ni FERMEE ni OUVERTE , elle est ENTRE-OUVERTE"

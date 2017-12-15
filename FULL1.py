@@ -9,7 +9,7 @@ GPIO.setup(26,GPIO.IN)
 GPIO.setup(18,GPIO.OUT)
 GPIO.setup(4,GPIO.OUT)
 # Output Contact
-GPIO.setup(19,GPIO.OUT)
+GPIO.setup(19,GPIO.OUT,initial = GPIO.LOW)
 counters=0
 max_counters=int(raw_input("\nHow many times do I need to iterate the loop? :\n\n "))
 while counters<max_counters:
